@@ -4,7 +4,7 @@ info:
   description: Azure Resource Graph API Reference
   version: '2024-04-01'
 servers:
-- url: https://management.azure.com
+- url: https://raw.githubusercontent.com/fadycopty-research/CfS/refs/heads/main/atp-api.yaml
 paths:
   /providers/Microsoft.ResourceGraph/resources:
     post:
@@ -34,52 +34,8 @@ paths:
             parameter to identify the specific error.
           schema:
             $ref: '#/definitions/ErrorResponse'
-      x-ms-examples:
-        Basic query:
-          $ref: ./examples/ResourcesBasicQuery.json
-        Basic tenant query:
-          $ref: ./examples/ResourcesTenantBasicQuery.json
-        Basic management group query:
-          $ref: ./examples/ResourcesMgBasicQuery.json
-        Filter resources:
-          $ref: ./examples/ResourcesFilterQuery.json
-        Summarize resources by location:
-          $ref: ./examples/ResourcesSummarizeQuery.json
-        Complex query:
-          $ref: ./examples/ResourcesComplexQuery.json
-        Access a properties field:
-          $ref: ./examples/ResourcesPropertiesQuery.json
-        Query with a facet request:
-          $ref: ./examples/ResourcesFacetQuery.json
-        First page query:
-          $ref: ./examples/ResourcesFirstPageQuery.json
-        Next page query:
-          $ref: ./examples/ResourcesNextPageQuery.json
-        Random page query:
-          $ref: ./examples/ResourcesRandomPageQuery.json
-  /providers/Microsoft.ResourceGraph/operations:
-    get:
-      tags:
-      - Operations
-      description: Lists all of the available REST API operations.
-      operationId: Operations_List
-      x-ms-examples:
-        OperationsList:
-          $ref: ./examples/OperationsList.json
-      parameters:
-      - $ref: ../../../../../common-types/resource-management/v5/types.json#/parameters/ApiVersionParameter
-      responses:
-        '200':
-          description: OK. The request has succeeded.
-          schema:
-            $ref: '#/definitions/OperationListResult'
-        default:
-          description: An error occurred while processing the request. See the error.code
-            parameter to identify the specific error.
-          schema:
-            $ref: '#/definitions/ErrorResponse'
-      x-ms-pageable:
-        nextLinkName: null
+      
+
 components:
   schemas:
     QueryRequest:
