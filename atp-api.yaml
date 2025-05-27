@@ -9,14 +9,16 @@ servers:
   - url: https://management.azure.com/
 paths:
   /providers/Microsoft.ResourceGraph/resources:
-    post:            
+    post:        
+      operationId: ARG_GetAttackPath     
       parameters:
-            - in: path
-              name: api-version
-              schema:
-                  type: string
-              required: true              
+        - in: path
+          name: api-version
+          schema:
+              type: string
+          required: true              
       requestBody:              
+        name: query
         required: true                  
         content:
           application/json:
