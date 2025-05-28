@@ -29,7 +29,7 @@ paths:
               properties:
                 query:
                   type: string
-                    
+                  required: true  
       responses:
         '200':
           description: Result of the query operation
