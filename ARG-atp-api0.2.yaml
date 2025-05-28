@@ -16,10 +16,11 @@ paths:
           name: api-version
           schema:
               type: string
-              default: 2024-04-01
+              const: '2024-04-01'
           required: true              
       requestBody:              
-        description: A KQL query        
+        description: A KQL query
+        name: KQLquery
         required: true                  
         content:
           application/json:
@@ -32,4 +33,3 @@ paths:
       responses:
         '200':
           description: Result of the query operation
-         
