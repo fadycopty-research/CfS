@@ -1,22 +1,25 @@
 openapi: 3.0.0
+
 info:
   title: Azure Resource Graph
   description: Azure Resource Graph API Reference
   version: '2024-04-01'
+
 servers:
   - url: https://management.azure.com/
 paths:
   /providers/Microsoft.ResourceGraph/resources:
-    post:
+    post:        
       operationId: ARG_GetAttackPath
       parameters:
-        - in: query
+        - in: query 
           name: api-version
           schema:
               type: string
               default: '2024-04-01'
-          required: true 
+          required: true              
       requestBody:              
+        description: A KQL query        
         required: true                  
         content:
           application/json:
@@ -25,7 +28,7 @@ paths:
               properties:
                 query:
                   type: string
-                  required: true         
+                  required: true   
       responses:
         '200':
           description: Result of the query operation
