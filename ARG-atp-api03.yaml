@@ -16,7 +16,7 @@ paths:
           name: api-version
           schema:
               type: string
-              const: '2024-04-01'
+              default: '2024-04-01'
           required: true              
       requestBody:              
         description: A KQL query        
