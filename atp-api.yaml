@@ -12,7 +12,7 @@ paths:
     post:        
       operationId: ARG_GetAttackPath     
       parameters:
-        - in: path
+        - in: query 
           name: api-version
           schema:
               type: string
