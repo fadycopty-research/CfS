@@ -8,9 +8,16 @@ info:
 servers:
   - url: https://management.azure.com/
 paths:
-  /providers/Microsoft.ResourceGraph/resources?api-version=2024-04-01:
+  /providers/Microsoft.ResourceGraph/resources:
     post:        
-      operationId: ARG_GetAttackPath         
+      operationId: ARG_GetAttackPath
+      parameters:
+        - in: query 
+          name: api-version
+          schema:
+              type: string
+              default: '2024-04-01'
+          required: true              
       requestBody:              
         description: A KQL query        
         required: true                  
