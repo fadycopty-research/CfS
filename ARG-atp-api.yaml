@@ -10,14 +10,7 @@ servers:
 paths:
   /providers/Microsoft.ResourceGraph/resources?api-version=2024-04-01:
     post:        
-      operationId: ARG_GetAttackPath
-      parameters:
-        - in: query 
-          name: api-version
-          schema:
-              type: string
-              default: '2024-04-01'
-          required: true              
+      operationId: ARG_GetAttackPath         
       requestBody:              
         description: A KQL query        
         required: true                  
