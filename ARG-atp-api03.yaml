@@ -1,7 +1,5 @@
 openapi: 3.0.0
 
-
-
 info:
   title: Azure Resource Graph
   description: Azure Resource Graph API Reference
@@ -21,7 +19,6 @@ paths:
               default: '2024-04-01'
           required: true              
       requestBody:              
-        description: A KQL query        
         required: true                  
         content:
           application/json:
