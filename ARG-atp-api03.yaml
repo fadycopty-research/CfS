@@ -1,5 +1,7 @@
 openapi: 3.0.0
 
+
+
 info:
   title: Azure Resource Graph
   description: Azure Resource Graph API Reference
